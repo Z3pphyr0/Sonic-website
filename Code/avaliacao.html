@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<meta charset = "UTF-8">
+<link rel = "stylesheet" href = "css/styles.css">
+<link rel = "stylesheet" href = "css/avaliacao.css">
+<link rel = "icon" href = "img/icon.png">
+<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	<head>
+		<title> Avaliação </title>
+	</head>
+	<body>
+		<header>
+			<a href = "index.html">
+				<img src = "img/logo.png" alt = "Sonic The Hedgehog">
+			</a>
+		</header>
+		<nav>
+			<a href = "jogos.html"> Jogos </a>
+			<a href = "historia.html"> História </a>
+			<a href = "personagens.html"> Personagens </a>
+			<audio id = "sound1" src = "RingSound.mp3" preload = "auto"></audio>
+  			<button onclick = "document.getElementById('sound1').play();" class = "direita">
+				<img src = "img/Ring.gif" alt = "Sonic Ring" id = "ring1">
+  			</button>
+		</nav>
+		<main>
+			<h1> AVALIAÇÃO! </h1>
+			<form action = "avaliacao.html" method = "get" accept-charset = "UTF-8" oninput = "x.value = parseInt(a.value)">
+				<section class = "space">
+					<h3> Informações Pessoais </h3>
+					<p> Nome completo: </p>
+					<input type = "text" name = "name" placeholder = "Nome Completo" autofocus autocomplete required>
+					<p> Email: </p>
+					<input type = "text" name = "email" placeholder = "Email" required complete autocomplete>
+					<p> Número de telefone: </p>
+					<input type = "tel" name = "telefone" placeholder = "XX-9XXXX-XXXX" pattern = "[0-9]{2}-[0-9]{4}-[0-9]{4}" required>
+					<p> Gênero: </p>
+					<input list = "genero" name = "genero" placeholder = "Gênero" required>
+					<datalist id = "genero">
+						<option value = "Masculino"> </option>
+						<option value = "Feminino"> </option>
+						<option value = "Outro"> </option>
+						<option value = "Prefiro Não Dizer"> </option>
+					</datalist>
+				</section>
+				<section class = "space">
+					<h3> Avaliação do Site </h3>
+					<p> Nota: </p>
+					<input type = "range" min = "0" max = "10" value = "0" list = " nota" class = "nota" id = "valorNota">
+					<p id = "pNota"> <span id = "Nota"> </span> </p>
+					<datalist id = nota>
+						<option value = "0" label = "0%"> </option>
+						<option value = "1"> </option>
+						<option value = "2"> </option>
+						<option value = "3"> </option>
+						<option value = "4"> </option>
+						<option value = "5"> </option>
+						<option value = "6"> </option>
+						<option value = "7"> </option>
+						<option value = "8"> </option>
+						<option value = "9"> </option>
+						<option value = "10" label = "100%"> </option>
+					</datalist>
+					<script> /* Script para exibir nota */
+							var slider = document.getElementById("valorNota");
+							var output = document.getElementById("Nota");
+							output.innerHTML = slider.value;
+							slider.oninput = function() {
+								output.innerHTML = this.value;
+							}
+					</script>
+					<p> Opinião: </p>
+					<textarea name = "opiniao" cols = "50" rows = "10" placeholder = "Sua opinião aqui!"></textarea>
+					<input type = "submit" name = "Submit" 
+					onclick = "alert('Obrigado pela colaboração!'')" id = "b">
+					<input type = "Reset" onclick = "alert('Redefinido todos os dados!')" id = "b">
+				</section>
+			</form>
+		</main>
+		<footer>
+			<div class = "div1">
+				<a href = "informacoes.html" id = "aF"> Informações </a>
+				<a href = "avaliacao.html" id = "aF"> Avaliação </a>
+			</div>
+			<div class = "div2">
+				<p id = "pF"> Todos os direitos reservados </p>
+				<p id = "pF"> Isaac Hermel Reginato </p>
+				<p id = "pF"> Versão 2.0 </p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,3 @@
+Os links dos sites parceiros ( João e Iury ) não estão funcionando pois retirei os arquivos deles do meu site.
+
+Motivo para isso foi para não pesar tanto o arquivo
